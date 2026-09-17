@@ -1,0 +1,24 @@
+{
+  "name": "mteclado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertosabau/MTeclado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/robertosabau/MTeclado/issues"
+  },
+  "homepage": "https://github.com/robertosabau/MTeclado#readme",
+  "devDependencies": {
+    "electron": "^44.4.1"
+  }
+}
