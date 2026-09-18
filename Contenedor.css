@@ -1,0 +1,6 @@
+.contenedor {
+    display: flex;       /* Alinea los botones en fila horizontal */
+    background: #222;    /* Fondo oscuro que simula el mueble del piano */
+    padding: 20px;       /* Margen de protección alrededor */
+    width: max-content;  /* Ajusta el fondo negro exacto al número de teclas */
+}
