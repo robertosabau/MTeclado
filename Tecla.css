@@ -1,0 +1,39 @@
+/*Normal*/
+.tecla {
+   /* Dimensiones clave para forma de tecla */
+    width: 60px;               /* Ancho estilizado */
+    height: 250px;             /* Alto alargado */
+    
+    /* Fondo y bordes imitación marfil/piano */
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
+    border: 1px solid #b5b5b5;
+    border-top: none;          /* Sin borde arriba para simular que sale del mueble */
+    
+    /* Redondeado solo en las esquinas de abajo */
+    border-radius: 0 0 5px 5px; 
+    
+    /* Ubicar el texto "DO" abajo del todo */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;      /* Separación de la letra con el borde inferior */
+    
+    /* Tipografía */
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+
+    /* Configuración técnica imprescindible */
+    box-sizing: border-box;    /* Para que el borde no sume tamaño extra */
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s ease;
+}
+/*Cuando se hace click*/
+.tecla:active {
+    /* Simula el hundimiento */
+    background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 100%);
+    border-top: 3px solid #333; /* Sombra superior al hundirse */
+    padding-bottom: 12px;       /* Baja un poco el texto al hundirse */
+}
