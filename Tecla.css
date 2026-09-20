@@ -37,3 +37,9 @@
     border-top: 3px solid #333; /* Sombra superior al hundirse */
     padding-bottom: 12px;       /* Baja un poco el texto al hundirse */
 }
+.tecla:active,.tecla.activo {
+    /* Simula el hundimiento */
+    background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 100%);
+    border-top: 3px solid #333; /* Sombra superior al hundirse */
+    padding-bottom: 12px;       /* Baja un poco el texto al hundirse */
+}
