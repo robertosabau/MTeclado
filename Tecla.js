@@ -1,3 +1,5 @@
+let audioCtx = null;
+
 class Tecla {
     // Declaración frecuencia de cada nota en 4 octava
     DO = 261.63;
@@ -46,26 +48,40 @@ class Tecla {
     }
 
     reproducirAudio() {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        
+        // Si el contexto se quedó en pausa por restricciones del navegador, lo reactiva
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+
         const nodoVolumen = audioCtx.createGain();
         const ahora = audioCtx.currentTime;
+        
         nodoVolumen.gain.setValueAtTime(0, ahora);
         nodoVolumen.gain.linearRampToValueAtTime(0.5, ahora + 0.01);
         nodoVolumen.gain.exponentialRampToValueAtTime(0.0001, ahora + 1.2);
         nodoVolumen.connect(audioCtx.destination);
+        
         const armonicos = [
             { multiplicador: 1, tipo: 'triangle', volumen: 0.6 }, 
             { multiplicador: 2, tipo: 'sine',     volumen: 0.3 }, 
             { multiplicador: 3, tipo: 'sine',     volumen: 0.1 }  
         ];
+        
         armonicos.forEach(armonico => {
             const oscilador = audioCtx.createOscillator();
             const gananciaArmonico = audioCtx.createGain();
+            
             oscilador.type = armonico.tipo;
             oscilador.frequency.setValueAtTime(this.frecuencia * armonico.multiplicador, ahora);
             gananciaArmonico.gain.setValueAtTime(armonico.volumen, ahora);
+            
             oscilador.connect(gananciaArmonico);
             gananciaArmonico.connect(nodoVolumen);
+            
             oscilador.start(ahora);
             oscilador.stop(ahora + 1.2);
         });
