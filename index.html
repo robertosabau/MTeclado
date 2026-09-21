@@ -20,8 +20,79 @@
   </style>
   <link rel="stylesheet" href="Tecla.css">
   <link rel="stylesheet" href="Contenedor.css">
+  <link rel="stylesheet" href="Barra.css">
 </head>
 <body>
+  <header class="barra-menu">
+  <ul class="menu-desplegable">
+    <!-- NUEVO BOTÓN PRINCIPAL -->
+    <li class="Opcion-Principal">
+      <button class="boton-trigger">Configuración</button>
+      <!-- PRIMER NIVEL: Cae hacia abajo al tocar Configuración -->
+      <ul class="dropdown-primer-nivel">
+        <!-- Opción Volumen (Ahora abre submenú a la derecha) -->
+        <li class="Opcion-Con-Submenu">
+          <button class="boton-item">Volumen <span>▶</span></button>
+          <ul class="submenu-derecha">
+            <li>
+              <div class="panel-submenu">
+                <label for="volumen">Ajuste de Volumen</label>
+                <input type="range" id="volumen" min="0" max="100" value="100">
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- Opción Octava (Ahora abre submenú a la derecha) -->
+        <li class="Opcion-Con-Submenu">
+          <button class="boton-item">Octava <span>▶</span></button>
+          <ul class="submenu-derecha-tabla">
+            <li>
+              <div class="panel-submenu">
+                <table class="tabla">
+                  <tbody>
+                    <tr>
+                      <td><label for="primeraoctava">Octava 1</label></td>
+                      <td><input type="radio" id="primeraoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="segundaoctava">Octava 2</label></td>
+                      <td><input type="radio" id="segundaoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="terceraoctava">Octava 3</label></td>
+                      <td><input type="radio" id="terceraoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="cuartaoctava">Octava 4</label></td>
+                      <td><input type="radio" id="cuartaoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="quintaoctava">Octava 5</label></td>
+                      <td><input type="radio" id="quintaoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="sextaoctava">Octava 6</label></td>
+                      <td><input type="radio" id="sextaoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="septimaoctava">Octava 7</label></td>
+                      <td><input type="radio" id="septimaoctava" name="octava"></td>
+                    </tr>
+                    <tr>
+                      <td><label for="octavaoctava">Octava 8</label></td>
+                      <td><input type="radio" id="octavaoctava" name="octava"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</header>
+<main class="zona-teclado">
   <div class="contenedor">
     <button id="DO" class="tecla">DO</button>
     <button id="RE" class="tecla">RE</button>
@@ -31,6 +102,7 @@
     <button id="LA" class="tecla">LA</button>
     <button id="SI" class="tecla">SI</button>
   </div>
+</main>
   <script src="Tecla.js"></script>
 </body>
 </html>
