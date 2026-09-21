@@ -12,6 +12,7 @@ class Tecla {
 
     constructor(boton, nota) {
         this.boton = boton;
+        this.volumen=1;
         switch (nota) {
             case "DO":
                 this.frecuencia = this.DO;
@@ -61,7 +62,7 @@ class Tecla {
         const ahora = audioCtx.currentTime;
         
         nodoVolumen.gain.setValueAtTime(0, ahora);
-        nodoVolumen.gain.linearRampToValueAtTime(0.5, ahora + 0.01);
+        nodoVolumen.gain.linearRampToValueAtTime(0.5*this.volumen, ahora + 0.01);
         nodoVolumen.gain.exponentialRampToValueAtTime(0.0001, ahora + 1.2);
         nodoVolumen.connect(audioCtx.destination);
         
@@ -114,17 +115,26 @@ class Tecla {
         }
         this.frecuencia = this.frecuencia * Modificador;
     }
+    establecerVolumen(valor){
+        this.volumen=valor/100;
+    }
 }
 
 class Teclado {
     ListaTeclas = [];
     constructor(teclas) {
         this.ListaTeclas = teclas;
+        this.octava=4;
     }
     cambiarOctava(octava) {
         let modificador = 2 ** (octava - 4);
         for (let i = 0; i < this.ListaTeclas.length; i++) {
             this.ListaTeclas[i].establecerFrecuencia(modificador);
+        }
+    }
+    establecerVolumen(num){
+        for (let i=0;i<this.ListaTeclas.length;i++){
+            this.ListaTeclas[i].establecerVolumen(num);
         }
     }
 }
