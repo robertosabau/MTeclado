@@ -51,10 +51,6 @@ class Tecla {
     }
 
     reproducirAudio() {
-        if (!audioCtx) {
-            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        }
-        
         // Si el contexto se quedó en pausa por restricciones del navegador, lo reactiva
         if (audioCtx.state === 'suspended') {
             audioCtx.resume();
@@ -155,6 +151,10 @@ let teclas = [];
 let miTeclado;
 
 window.addEventListener("DOMContentLoaded", () => {
+    //Inicializacion sistema de audio
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    audioCtx.resume();
+    //Obtencion teclas
     teclas[0] = new Tecla(document.getElementById("DO"), "DO");
     teclas[1] = new Tecla(document.getElementById("RE"), "RE");
     teclas[2] = new Tecla(document.getElementById("MI"), "MI");
@@ -162,8 +162,9 @@ window.addEventListener("DOMContentLoaded", () => {
     teclas[4] = new Tecla(document.getElementById("SOL"), "SOL");
     teclas[5] = new Tecla(document.getElementById("LA"), "LA");
     teclas[6] = new Tecla(document.getElementById("SI"), "SI");
-
+    //Incializar teclado
     miTeclado = new Teclado(teclas);
+    //Hacer global teclado
     window.miTeclado = miTeclado;
 });
 
