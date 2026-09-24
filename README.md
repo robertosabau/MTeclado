@@ -15,7 +15,7 @@ Ya desde ahí puedes tocar el teclado de 2 formas:
     * **Tecla 4**: FA
     * **Tecla 5**: SOL
     * **Tecla 6**: LA
-    * **Tecla numérica 7**: SI
+    * **Tecla 7**: SI
 
 Además de poder tocar el teclado, también se realizar las siguientes configuraciones del programa:
 * **Volumen**: El volumen interno del programa.
