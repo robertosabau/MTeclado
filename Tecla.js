@@ -1,3 +1,5 @@
+//LOGICA TECLADO Y TECLAS
+
 let audioCtx = null;
 
 class Tecla {
@@ -9,7 +11,7 @@ class Tecla {
     SOL = 392.00;
     LA = 440.00;
     SI = 493.88;
-
+    //Constructor de la tecla
     constructor(boton, nota) {
         this.boton = boton;
         this.volumen=1;
