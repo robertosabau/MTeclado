@@ -162,6 +162,7 @@ window.addEventListener("DOMContentLoaded", () => {
     teclas[6] = new Tecla(document.getElementById("SI"), "SI");
 
     miTeclado = new Teclado(teclas);
+    window.miTeclado = miTeclado;
 });
 
 const teclasPresionadas = {};
