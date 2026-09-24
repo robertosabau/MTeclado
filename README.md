@@ -36,6 +36,7 @@ Para ejecutar el programa hay 2 opciones:
   1. Descargar o clonar el repositorio.
   2. Abre tu carpeta y haz doble clic sobre el archivo `index.html`.
   3. El programa esta lista para usar en la pestaña.
+**Alternativamente puedes probarlo en esta web**: https://robertosabau.github.io/MTeclado/
 #### Opción 2: Como Programa de Escritorio (Requiere Node.js)
 1. Asegúrate de tener instalado [Node.js](https://nodejs.org).
 2. Descarga o clona este repositorio y abre tu consola de comandos en el directorio del proyecto.
