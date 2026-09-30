@@ -66,6 +66,7 @@
 
 /* Botones internos para "Volumen" y "Octava" */
 .boton-item {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,10 +112,19 @@
 .submenu-derecha { width: 180px; }
 .submenu-derecha-tabla { width: 200px; }
 
+.submenu-derecha > li,
+.submenu-derecha-tabla > li {
+    margin: 0;
+    padding: 0;
+}
+
 /* Muestra los paneles correspondientes al pasar por su botón */
-.Opcion-Con-Submenu:hover .submenu-derecha,
-.Opcion-Con-Submenu:hover .submenu-derecha-tabla {
+.Opcion-Con-Submenu:hover >.submenu-derecha,
+.Opcion-Con-Submenu:hover >.submenu-derecha-tabla {
   display: block;
+}
+.submenu-derecha > li:hover > .submenu-derecha {
+    display: block;
 }
 
 /* ==========================================

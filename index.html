@@ -28,9 +28,38 @@
     <!-- NUEVO BOTÓN PRINCIPAL -->
     <li class="Opcion-Principal">
       <button class="boton-trigger">Configuración</button>
-      <!-- PRIMER NIVEL: Cae hacia abajo al tocar Configuración -->
       <ul class="dropdown-primer-nivel">
-        <!-- Opción Volumen (Ahora abre submenú a la derecha) -->
+        <li class="Opcion-Con-Submenu">
+          <button class="boton-item">Fondo <span>▶</span></button>
+          <ul class="submenu-derecha">
+            <li>
+              <button class="boton-item">Color de Fondo <span>▶</span></button>
+              <ul class="submenu-derecha">
+              <li>
+                <div class="panel-submenu">
+                <label for="color-fondo">Color de Fondo</label>
+                <input type="color" id="color-fondo" value="#2c3e50">
+              </div>
+            </li>
+          </ul>
+            </li>
+            <li>
+              <button class="boton-item">Imagen de Fondo <span>▶</span></button>
+              <ul class ="submenu-derecha">
+                <li>
+                  <div class="panel-submenu">
+                    <label for="color-fondo">Imagen de Fondo</label>
+                    <input type="file" id="imagen-fondo" accept="image/*" hidden>
+                    <button type="button" id="boton-imagen">
+                      Seleccionar imagen
+                    </button>
+                  </div>
+                </li>
+              </ul>
+          </li>
+          </ul>
+        </li>
+        <!-- Opción Volumen -->
         <li class="Opcion-Con-Submenu">
           <button class="boton-item">Volumen <span>▶</span></button>
           <ul class="submenu-derecha">
@@ -42,7 +71,7 @@
             </li>
           </ul>
         </li>
-        <!-- Opción Octava (Ahora abre submenú a la derecha) -->
+        <!-- Opción Octava-->
         <li class="Opcion-Con-Submenu">
           <button class="boton-item">Octava <span>▶</span></button>
           <ul class="submenu-derecha-tabla">

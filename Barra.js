@@ -12,6 +12,32 @@ deslizanteVolumen.addEventListener('input', (evento) => {
     window.miTeclado.establecerVolumen(valorActual);
   }
 });
+//Obtencion y configuración del selector de color de fondo
+const selectorColor=document.getElementById("color-fondo");
+
+selectorColor.addEventListener("input",function(){
+    document.body.style.background=this.value;
+});
+
+//Obtencion y configuracion del selector de imagen
+const selectorImagen = document.getElementById("imagen-fondo");
+const botonImagen = document.getElementById("boton-imagen");
+
+botonImagen.addEventListener("click",function(){
+    selectorImagen.click();
+});
+selectorImagen.addEventListener("change", function () {
+    const archivo = this.files[0];
+
+    if (archivo) {
+        const url = URL.createObjectURL(archivo);
+
+        document.body.style.backgroundImage = `url("${url}")`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+    }
+});
 
 //Obtencion de la tabla con las opciones de octavas
 const opcionesOctava = document.querySelectorAll('input[name="octava"]');
