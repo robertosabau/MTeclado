@@ -67,3 +67,19 @@ opcionesOctava.forEach((radio)=>{
         }
     });
 });
+
+//Obtencion opciones de modo
+const radioClaro = document.getElementById('modoClaro');
+const radioOscuro = document.getElementById('modoOscuro');
+
+//Configuracion botones de modo
+radioClaro.addEventListener('change', () => {
+  if (radioClaro.checked) {
+    document.body.classList.remove('dark-mode');
+  }
+});
+radioOscuro.addEventListener('change', () => {
+  if (radioOscuro.checked) {
+    document.body.classList.add('dark-mode');
+  }
+});

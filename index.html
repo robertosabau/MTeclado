@@ -25,11 +25,12 @@
 <body>
   <header class="barra-menu">
   <ul class="menu-desplegable">
-    <!-- NUEVO BOTÓN PRINCIPAL -->
+    <!-- Barra superior -->
     <li class="Opcion-Principal">
       <button class="boton-trigger">Configuración</button>
       <ul class="dropdown-primer-nivel">
         <li class="Opcion-Con-Submenu">
+          <!-- Opcion Fondo -->
           <button class="boton-item">Fondo <span>▶</span></button>
           <ul class="submenu-derecha">
             <li>
@@ -74,7 +75,7 @@
         <!-- Opción Octava-->
         <li class="Opcion-Con-Submenu">
           <button class="boton-item">Octava <span>▶</span></button>
-          <ul class="submenu-derecha-tabla">
+          <ul class="submenu-derecha">
             <li>
               <div class="panel-submenu">
                 <table class="tabla">
@@ -110,6 +111,28 @@
                     <tr>
                       <td><label for="octavaoctava">Octava 8</label></td>
                       <td><input type="radio" id="octavaoctava" name="octava"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <!-- Opción Modo-->
+        <li class="Opcion-Con-Submenu">
+          <button class="boton-item">Modo <span>▶</span></button>
+          <ul class="submenu-derecha">
+            <li>
+              <div class="panel-submenu">
+                <table class="tabla">
+                  <tbody>
+                    <tr>
+                      <td><label for="modoClaro">Modo Claro</label></td>
+                      <td><input type="radio" id="modoClaro" name="modo" checked></td>
+                    </tr>
+                    <tr>
+                      <td><label for="modoOscuro">Modo Oscuro</label></td>
+                      <td><input type="radio" id="modoOscuro" name="modo"></td>
                     </tr>
                   </tbody>
                 </table>
