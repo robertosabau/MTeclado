@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Aquí le indicamos a GitHub que tu web está dentro de src
-          path: './src'
+          path: './scr'
 
       - name: Deploy to GitHub Pages
         id: deployment
