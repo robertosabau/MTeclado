@@ -16,8 +16,16 @@ Ya desde ahí puedes tocar el teclado de 2 formas:
     * **Tecla 5**: SOL
     * **Tecla 6**: LA
     * **Tecla 7**: SI
+    * **CTRL+Tecla 1**: DO#
+    * **CTRL+Tecla 2**: RE#
+    * **CTRL+Tecla 3**: FA#
+    * **CTRL+Tecla 4**: SOL#
+    * **CTRL+Tecla 5**: LA#
 
 Además de poder tocar el teclado, también se realizar las siguientes configuraciones del programa:
+* **Fondo**: El fondo del programa, pudiendo elegir entre las siguientes opciones:
+     * **Color de Fondo**: Elegir un color de fondo en formato RGB.
+     * **Imagen de Fondo**: Elegir una imagen de tu propio ordenador.
 * **Volumen**: El volumen interno del programa.
 * **Octava**: La octava del teclado, pudiendo elegir entre las siguientes opciones:
   * **1 Octava**.
@@ -28,13 +36,15 @@ Además de poder tocar el teclado, también se realizar las siguientes configura
   * **6 Octava**.
   * **7 Octava**.
   * **8 Octava**.
-
+* **Modo**: La estética del programa, pudiendo elegir entre:
+   * **Modo Claro**.
+   * **Modo Oscuro**.
 ### Ejecución
 
 Para ejecutar el programa hay 2 opciones:
 #### Opción 1: En el Navegador Web (Sin instalar nada)
   1. Descargar o clonar el repositorio.
-  2. Abre tu carpeta y haz doble clic sobre el archivo `index.html`.
+  2. Abre la carpeta del proyecto, entra a la carpeta haz doble clic sobre el archivo `index.html`.
   3. El programa esta lista para usar en la pestaña.
 
 **Alternativamente puedes probarlo en esta web**: https://robertosabau.github.io/MTeclado/
