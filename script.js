@@ -14,7 +14,7 @@
     ventana.setMenu(null); 
 
     // Indica qué interfaz visual va a cargar dentro de la ventana
-    ventana.loadFile('index.html');
+    ventana.loadFile('scr/index.html');
   }
   // Arranca la app cuando Electron esté listo
   app.whenReady().then(() => {
