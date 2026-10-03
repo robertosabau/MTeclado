@@ -1,0 +1,81 @@
+/*Normal*/
+.tecla {
+    width: 60px;
+    height: 250px;
+    background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 100%);
+    border: 1px solid #b5b5b5;
+    border-top: none;
+    border-radius: 0 0 5px 5px; 
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 15px;
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; /* Capa inferior */
+    transition: background 0.1s ease;
+}
+/*Cuando se hace click*/
+.tecla:active {
+    /* Simula el hundimiento */
+    background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 100%);
+    border-top: 3px solid #333; /* Sombra superior al hundirse */
+    padding-bottom: 12px;       /* Baja un poco el texto al hundirse */
+}
+.tecla:active,.tecla.activo {
+    /* Simula el hundimiento */
+    background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 100%);
+    border-top: 3px solid #333; /* Sombra superior al hundirse */
+    padding-bottom: 12px;       /* Baja un poco el texto al hundirse */
+}
+.contenedor {
+    display: flex;
+    position: relative; /* Base imprescindible */
+    background-color: #111;
+    padding: 10px;
+    border-radius: 8px;
+}
+.tecla-negra {
+    width: 34px;               
+    height: 150px;             
+    background: linear-gradient(to bottom, #111 0%, #333 100%);
+    border: 1px solid #000;
+    border-radius: 0 0 3px 3px;
+    
+    /* SOLUCIÓN AL CENTRADO Y RECORTE */
+    position: absolute;
+    z-index: 10;               /* Obliga a estar POR ENCIMA de todas las blancas (no se corta) */
+    
+    /* SOLUCIÓN A LOS CLICS */
+    pointer-events: auto;      /* Asegura que responda de forma independiente al clic */
+
+    /* Alineación de texto inferior */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background 0.1s ease;
+}
+
+/* Efecto Click para la tecla negra */
+.tecla-negra:active, .tecla-negra.activo {
+    background: linear-gradient(to bottom, #333 0%, #555 100%);
+    padding-bottom: 8px;
+}
+#DO\♯  { left: calc(1 * 60px - 17px + 20px); } /* Ranura 1 (Entre DO y RE) -> 53px */
+#RE\♯  { left: calc(2 * 60px - 17px + 20px); } /* Ranura 2 (Entre RE y MI) -> 113px */
+
+#FA\♯  { left: calc(4 * 60px - 17px + 20px); } /* Ranura 4 (Entre FA y SOL) -> 233px */
+#SOL\♯ { left: calc(5 * 60px - 17px + 20px); } /* Ranura 5 (Entre SOL y LA) -> 293px */
+#LA\♯  { left: calc(6 * 60px - 17px + 20px); } /* Ranura 6 (Entre LA y SI) -> 353px */

@@ -66,6 +66,7 @@
 
 /* Botones internos para "Volumen" y "Octava" */
 .boton-item {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,10 +112,19 @@
 .submenu-derecha { width: 180px; }
 .submenu-derecha-tabla { width: 200px; }
 
+.submenu-derecha > li,
+.submenu-derecha-tabla > li {
+    margin: 0;
+    padding: 0;
+}
+
 /* Muestra los paneles correspondientes al pasar por su botón */
-.Opcion-Con-Submenu:hover .submenu-derecha,
-.Opcion-Con-Submenu:hover .submenu-derecha-tabla {
+.Opcion-Con-Submenu:hover >.submenu-derecha,
+.Opcion-Con-Submenu:hover >.submenu-derecha-tabla {
   display: block;
+}
+.submenu-derecha > li:hover > .submenu-derecha {
+    display: block;
 }
 
 /* ==========================================
@@ -153,4 +163,58 @@
 }
 .tabla input[type="radio"] {
   cursor: pointer;
+}
+/* ==========================================
+   ESTILOS ADICIONALES PARA MODO OSCURO
+   ========================================== */
+
+/* 1. Fondo de la barra principal y bordes */
+body.dark-mode .barra-menu {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333333;
+}
+
+/* 2. Botón disparador principal ("Configuración") */
+body.dark-mode .boton-trigger {
+    color: #e0e0e0;
+}
+body.dark-mode .boton-trigger:hover,
+body.dark-mode .Opcion-Principal:hover .boton-trigger {
+    background-color: #333333;
+}
+
+/* 3. Fondos y bordes de los menús desplegables (Primer y Segundo Nivel) */
+body.dark-mode .dropdown-primer-nivel,
+body.dark-mode .submenu-derecha,
+body.dark-mode .submenu-derecha-tabla {
+    background-color: #252526;
+    border-color: #454545;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra más oscura */
+}
+
+/* 4. Botones internos ("Volumen", "Octava") */
+body.dark-mode .boton-item {
+    color: #e0e0e0;
+}
+/* Al pasar el ratón se mantiene tu azul destacado, pero cambiamos el color del texto secundario */
+body.dark-mode .boton-item:hover {
+    background-color: #0078d7; /* Puedes cambiarlo por #9b59b6 si quieres morado */
+    color: #ffffff;
+}
+body.dark-mode .boton-item span {
+    color: #aaaaaa; /* Texto de la derecha (flechita o atajo) */
+}
+body.dark-mode .boton-item:hover span {
+    color: #ffffff;
+}
+
+/* 5. Contenidos de los paneles (Labels, Textos y Tablas) */
+body.dark-mode .panel-submenu,
+body.dark-mode .tabla td {
+    color: #e0e0e0;
+}
+
+/* 6. Efecto Hover en las filas de la tabla */
+body.dark-mode .tabla tr:hover {
+    background-color: #2d3d50; /* Un azul muy oscuro que contrasta con el texto claro */
 }
